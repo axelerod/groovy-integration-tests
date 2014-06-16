@@ -10,7 +10,7 @@ import java.util.List;
  * Time: 11:07
  * To change this template use File | Settings | File Templates.
  */
-public class GetCollection {
+public class UsersRepo {
 
     public List<User> getCollection() {
         return  new ArrayList<User>(){

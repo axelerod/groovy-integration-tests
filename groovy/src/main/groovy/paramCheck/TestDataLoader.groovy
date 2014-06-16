@@ -6,7 +6,7 @@ import org.junit.Test
  * (c) Swissquote 6/10/14
  * @author oburov
  */
-class TestParamCheck {
+class TestDataLoader {
     @Test
     public void testParams() {
         def index = 1232;

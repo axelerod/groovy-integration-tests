@@ -9,8 +9,10 @@ package collection;
  */
 public class User {
     private String passportId;
-    private String lisenceNumber;
+    private String licenceNumber;
     private Integer phoneNumber;
+
+	// ... and other 30 fields
 
     public User(String passportId) {
         this.passportId = passportId;
@@ -21,9 +23,9 @@ public class User {
         this.phoneNumber = phoneNumber;
     }
 
-    public User(String passportId, String lisenceNumber, Integer phoneNumber) {
+    public User(String passportId, String licenceNumber, Integer phoneNumber) {
         this.passportId = passportId;
-        this.lisenceNumber = lisenceNumber;
+        this.licenceNumber = licenceNumber;
         this.phoneNumber = phoneNumber;
     }
 
@@ -34,4 +36,12 @@ public class User {
     public Integer getPhoneNumber() {
         return phoneNumber;
     }
+
+	public String getLicenceNumber() {
+		return licenceNumber;
+	}
+
+	public void setLicenceNumber(String licenceNumber) {
+		this.licenceNumber = licenceNumber;
+	}
 }
