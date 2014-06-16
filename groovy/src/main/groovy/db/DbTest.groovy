@@ -1,6 +1,8 @@
+package db
+
 /**
  * Created by IntelliJ IDEA.
- * User: alexey
+ * collection.User: alexey
  * Date: 15.06.14
  * Time: 15:08
  * To change this template use File | Settings | File Templates.

@@ -1,6 +1,7 @@
+package db
 /**
  * Created by IntelliJ IDEA.
- * User: alexey
+ * collection.User: alexey
  * Date: 15.06.14
  * Time: 15:05
  * To change this template use File | Settings | File Templates.
@@ -24,7 +25,7 @@ class DB {
             return "SELECT FROM $o.table WHERE $o.column $o.condition '$o.value'";
         }
     }
-    // select * from TABLE where COLUMN1 LIKE VALUE1 or COLUMN2 LIKE
+
     class QueryObject {
         def table
         def column

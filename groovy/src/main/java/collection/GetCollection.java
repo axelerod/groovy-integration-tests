@@ -1,9 +1,11 @@
+package collection;
+
 import java.util.ArrayList;
 import java.util.List;
 
 /**
  * Created by IntelliJ IDEA.
- * User: alexey
+ * collection.User: alexey
  * Date: 15.06.14
  * Time: 11:07
  * To change this template use File | Settings | File Templates.

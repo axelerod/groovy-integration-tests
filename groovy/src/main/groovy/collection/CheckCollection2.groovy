@@ -1,3 +1,5 @@
+package collection
+
 class CheckCollection2 extends  GroovyTestCase{
 
     def checkObjectField = {field,constraint, assertMessage,value ->
