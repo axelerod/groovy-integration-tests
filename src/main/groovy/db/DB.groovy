@@ -115,7 +115,6 @@ class DB {
 
         def invokeMethod(String name, args) {
             queryObject.condition = name
-            args[2].length();
             queryObject.value = args[0]
             queryObject.assertClosure = args[1]
         }

@@ -11,10 +11,10 @@ class TestDb extends GroovyTestCase{
     void test() {
         def db = new DB()
         def result = db.select {
-            USER_GROOVY {
-                NAME {
-                    LIKE("Bob") {
-                        assert size == 1
+            USER_GROOVY {                           // table
+                NAME {                              // column
+                    LIKE("Bob") {                   // condition
+                        assert size == 1            // asserts
                         assert SURNAME == "Dylan"
                         assert ID == 1
                     }
