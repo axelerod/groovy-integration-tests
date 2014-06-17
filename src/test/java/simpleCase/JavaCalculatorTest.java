@@ -10,6 +10,6 @@ import org.junit.Test;
 public class JavaCalculatorTest {
 	@Test
 	public void test() {
-		assert 91 == new Calculator().multiply(3,3);
+		assert 9 == new Calculator().multiply(3,3);
 	}
 }

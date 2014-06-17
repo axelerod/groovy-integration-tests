@@ -18,12 +18,12 @@ public class User {
         this.passportId = passportId;
     }
 
-    public User(String passportId, Integer phoneNumber) {
-        this.passportId = passportId;
-        this.phoneNumber = phoneNumber;
-    }
+	public User(String passportId, String licenceNumber) {
+		this.passportId = passportId;
+		this.licenceNumber = licenceNumber;
+	}
 
-    public User(String passportId, String licenceNumber, Integer phoneNumber) {
+	public User(String passportId, String licenceNumber, Integer phoneNumber) {
         this.passportId = passportId;
         this.licenceNumber = licenceNumber;
         this.phoneNumber = phoneNumber;

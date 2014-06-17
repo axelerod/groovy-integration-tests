@@ -2,9 +2,9 @@ package simpleCase
 
 import org.junit.Test
 
-class CalculatorTest {
+class TestCalculator {
     @Test
     void test() {
-        assert 91 == new Calculator().multiply(3,3);
+        assert 9 == new Calculator().multiply(3,3);
     }
 }

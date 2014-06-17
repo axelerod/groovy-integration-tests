@@ -7,8 +7,8 @@ package db
  * Time: 15:08
  * To change this template use File | Settings | File Templates.
  */
-class DbTest extends GroovyTestCase{
-    def testSelect() {
+class TestDb extends GroovyTestCase{
+    void test() {
         def db = new DB()
         def result = db.select {
             USER {

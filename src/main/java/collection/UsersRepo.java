@@ -14,8 +14,8 @@ public class UsersRepo {
 
     public List<User> getCollection() {
         return  new ArrayList<User>(){
-            {add(new User("1255"));}
-            {add(new User("123"));}
+            {add(new User("1255", "123456"));}
+            {add(new User("123", "123345"));}
         };
     }
 }
