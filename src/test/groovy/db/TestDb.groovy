@@ -8,6 +8,31 @@ package db
  * To change this template use File | Settings | File Templates.
  */
 class TestDb extends GroovyTestCase{
+    void setUp() {
+        println("setup")
+        new DB().ddl(
+                '''
+                CREATE TABLE USER_GROOVY
+                (
+                    ID int,
+                    NAME varchar(255),
+                    SURNAME varchar(255)
+                )
+                '''
+        )
+        new DB().dml("INSERT INTO USER_GROOVY VALUES (1, 'Bob', 'Dylan')")
+    }
+
+    void tearDown() {
+        println("tear")
+        new DB().ddl(
+                '''
+                DROP TABLE USER_GROOVY
+                '''
+        )
+    }
+
+
     void test() {
         def db = new DB()
         def result = db.select {

@@ -9,16 +9,33 @@ class TestXMLAndDB extends GroovyTestCase {
         <country>Australia</country>
         <record type='speed'>Production Pickup Truck with speed of 271kph</record>
       </car>
-      <car name='P50' make='Peel' year='1962'>
-        <country>Isle of Man</country>
-        <record type='size'>Smallest Street-Legal Car at 99cm wide and 59 kg in weight</record>
-      </car>
-      <car name='Royale' make='Bugatti' year='1931'>
-        <country>France</country>
-        <record type='price'>Most Valuable Car at $15 million</record>
-      </car>
     </records>
   '''
+
+    void setUp() {
+        println("setup")
+        new DB().ddl(
+                '''
+                CREATE TABLE CARS
+                (
+                    ID int,
+                    NAME varchar(255),
+                    COUNTRY varchar(255),
+                    YEAR varchar(255)
+                )
+                '''
+        )
+        new DB().dml("INSERT INTO CARS VALUES (1, 'HSV Maloo', 'Australia', '2006')")
+    }
+
+    void tearDown() {
+        println("tear")
+        new DB().ddl(
+                '''
+                DROP TABLE CARS
+                '''
+        )
+    }
 
     void test() {
         def records = new XmlParser().parseText(CAR_RECORDS)

@@ -20,7 +20,7 @@ class DB {
 
         def resultQuery = new SQLBuilder().buildQuery(queryObject);
 
-        def sql = Sql.newInstance('jdbc:oracle:thin:@//conn', 'user', 'pass', 'oracle.jdbc.OracleDriver');
+        def sql = Sql.newInstance('jdbc:h2:~/test', 'sa', 'sa', 'org.h2.Driver');
         def rows = sql.rows(resultQuery, [value: queryObject.value]);
 
         def rowsAsserter = new RowsAsserter(rows: rows);
@@ -28,6 +28,18 @@ class DB {
         asserts.delegate = rowsAsserter;
         asserts.resolveStrategy = Closure.DELEGATE_FIRST;
         asserts()
+    }
+
+    def dml(def query) {
+        def sql = Sql.newInstance('jdbc:h2:~/test', 'sa', 'sa', 'org.h2.Driver');
+        sql.executeInsert query
+        sql.commit()
+    }
+
+    def ddl(def query) {
+        def sql = Sql.newInstance('jdbc:h2:~/test', 'sa', 'sa', 'org.h2.Driver');
+        sql.execute query
+        sql.commit()
     }
 
     class RowsAsserter {
